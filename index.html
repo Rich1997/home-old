@@ -1,0 +1,32 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="shortcut icon" href="assets/circle_white_24dp.svg" type="image/x-icon">
+        <title>Home</title>
+    </head>
+    <body onload="initClock()">
+        <div class="container">
+            <div class="clock">
+                <span id="hours"> </span>&ThinSpace;
+                <span id="minutes"> </span>&ThinSpace;
+                <span id="seconds"> </span>
+            </div>
+            <div class="date-daycounts">
+                <div class="date">
+                    <span id="day"> </span>,
+                    <span id="month"> </span>
+                    <span id="date"> </span>,
+                    <span id="year"> </span>
+                </div>
+                <div class="daycounts">
+                    Day of the year is <span id="daynumber"></span>
+                    &nbsp;|&nbsp;
+                    <span id="remainingdays"></span>
+                </div>
+            </div>
+        </div>
+        <script src="src/datetime.js"></script>
+    </body>
+</html>

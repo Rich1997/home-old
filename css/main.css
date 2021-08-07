@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    /* Font declarations */
+    --main-font: 2rem;
+    --big-clock: 10rem;
+
+    --main-font-mobile: 1.2rem;
+    --small-clock: 5rem;
+
+    --grad1: linear-gradient(
+        to right bottom,
+        #2195ff,
+        #8588f7,
+        #bb78e4,
+        #df68c7,
+        #f65da4,
+        #fe5b8e,
+        #ff5e77,
+        #ff6561,
+        #ff6c53,
+        #ff7544,
+        #ff7f33,
+        #ff8a1e
+    );
+    --grad2: linear-gradient(
+        91.41deg,
+        #4021ff 6.27%,
+        #5600c2 23.92%,
+        #a500b5 41.63%,
+        #ff5151 59.25%,
+        #fd9359 75.39%,
+        #fbaa5f 84.96%
+    );
+    --darkgrad: radial-gradient(142.38% 212.19% at 48% 50%, #ffffff 0%, rgba(12, 12, 12) 100%);
+}
+
+body {
+    font-family: "Inter";
+    background: #212121;
+    color: white;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clock {
+    font-weight: 900;
+    font-size: var(--big-clock);
+    padding: 1rem;
+    line-height: 8rem;
+    letter-spacing: -1rem;
+    margin-right: 1rem;
+
+    background: var(--grad2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.date-daycounts {
+    text-align: center;
+    padding-bottom: 1rem;
+
+    background: var(--darkgrad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.date {
+    font-size: var(--main-font);
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        height: auto;
+        justify-content: flex-start;
+        padding-top: 10rem;
+    }
+
+    .clock {
+        font-size: var(--small-clock);
+        line-height: 2.5rem;
+        letter-spacing: -0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .date {
+        font-size: var(--main-font-mobile);
+    }
+}
