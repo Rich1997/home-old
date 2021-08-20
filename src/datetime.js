@@ -56,6 +56,8 @@ d += date;
 
 document.getElementById("daynumber").innerHTML = d;
 
-totaldays - d > 1 || d == totaldays
-    ? (document.getElementById("remainingdays").innerHTML = totaldays - d + " days left in the year")
-    : (document.getElementById("remainingdays").innerHTML = totaldays - d + " day left in the year");
+totaldays - d == 1
+    ? (document.getElementById("remainingdays").innerHTML = totaldays - d + " day left in the year")
+    : d == totaldays
+    ? (document.getElementById("remainingdays").innerHTML = "Today is the last day of the year")
+    : (document.getElementById("remainingdays").innerHTML = totaldays - d + " days left in the year");
